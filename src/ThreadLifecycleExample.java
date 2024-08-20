@@ -29,7 +29,8 @@ public class ThreadLifecycleExample {
             demo.notify(); // Moving thread from Waiting to Runnable
         }
 
-        Thread.sleep(500);
-        System.out.println(thread.getState()); // Terminated (after completion)
+//        Thread.sleep(500);
+        thread.join();
+        System.out.println("State after conpletion" + thread.getState()); // Terminated (after completion)
     }
 }
